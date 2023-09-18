@@ -198,4 +198,28 @@ padding: 0 1.3rem;
     transition: all 0.5s var(--transition);
 }
 
+.content_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    padding: 5rem 0;
+    gap: 2rem;
+    align-items: center;
+}
+
+.content{
+    width: 100%;
+}
+
+
+.heading_section{
+    font-size: 4.2rem;
+    line-height: 5.2rem;
+    font-family: var(--font-sec);
+    color: var(--first);
+}
+
+.light_text{
+    
+}
+
 /* css codes-e */

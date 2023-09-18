@@ -18,12 +18,14 @@
 
     /* colors */
 
-    --first: hsl(0, 100%, 50%);
+    --first: hsl(291, 83%, 30%);
+    --sec:hsl(291, 68%, 53%);
     --text: hsl(0, 0%, 20%);
-    --title: hsl(120, 100%, 50%);
-    --body: hsl(152, 67%, 84%);
+    --title: hsl(233, 94%, 38%);
+    --body: hsl(0, 0%, 86%);
     --container: hsl(175, 34%, 68%);
     --black: hsl(0, 0%, 10%);
+    --webkit:hsl(0, 0%, 94%);
 
 
 
@@ -31,8 +33,10 @@
     --transition: ease-n-out;
 
     /* header-height */
-    --header-height: 5rem;
+    --nav-height: 7rem;
 
+    /* container-width */
+    --container: 122rem;
     /* font-w */
     --font-w-500: 500;
     --font-w-900: 900;
@@ -45,10 +49,14 @@
 
 /* general css */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 html {
@@ -108,3 +116,86 @@ img {
 }
 
 /* general css */
+
+
+
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--webkit);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+/* scroll bar */
+
+
+
+/* css codes-s */
+.container{
+max-width: var(--container);
+margin: 0 auto;
+padding: 0 1.3rem;
+}
+
+
+.nav_bar{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: var(--webkit);
+    height: var(--nav-height);
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--title);
+    margin: 0 0 0 1rem;
+}
+
+
+.nav_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_list{
+    margin: 0.1rem;
+    display: inline-block;
+}
+
+.nav_list .nav_link{
+    font-family: var(--font-w-700);
+    border-radius: 0.6rem;
+    color: var(--first);
+    padding: 0.7rem 2rem;
+    transition: all 0.5s var(--transition);
+}
+
+.nav_links .nav_list .nav_link:active,
+.nav_links .nav_list .nav_link:focus,
+.nav_link.active {
+    background: var(--sec);
+    margin: 0 1rem 0 0 ;
+    color: var(--webkit);
+    font-weight: var(--font-w-700);
+    transition: all 0.5s var(--transition);
+}
+
+/* css codes-e */

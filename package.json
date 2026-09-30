@@ -1,0 +1,14 @@
+{
+  "name": "kinetic-training-session-planner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check:syntax": "node --check assets/js/sessions.js && node --check assets/js/planner.js && node --check assets/js/main.js",
+    "check": "npm run check:syntax && npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
